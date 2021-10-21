@@ -24,32 +24,32 @@
             alt="foto pessoal"
           />
 
-          <h1>Matheus Sena</h1>
+          <h1 id="userName">Matheus Sena</h1>
 
-          <a href=""
+          <a href="https://github.com/" target="_blank"
             ><img src="images/github.svg" alt="Github" /> @itsmathsena</a
           >
 
           <p>Descrição</p>
 
-          <ul>
-            <li>
-              <a href="https://youtube.com"
+          <ul id="socialLinks">
+            <li class="youtube">
+              <a href="https://youtube.com" target="_blank"
                 ><img src="images/youtube.svg" alt="youtube"
               /></a>
             </li>
-            <li>
-              <a href="https://instagram.com">
+            <li class="instagram">
+              <a href="https://instagram.com" target="_blank">
                 <img src="images/instagram.svg" alt="instagram"
               /></a>
             </li>
-            <li>
-              <a href="https://facebook.com">
+            <li class="facebook">
+              <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.svg" alt="facebook"
               /></a>
             </li>
-            <li>
-              <a href="https://twitter.com">
+            <li class="twitter">
+              <a href="https://twitter.com" target="_blank">
                 <img src="images/twitter.svg" alt="twitter"
               /></a>
             </li>
@@ -57,5 +57,25 @@
         </div>
       </div>
     </main>
+    <script>
+      const LinksSocialMedia = {
+        github: 'mathsena',
+        youtube: 'mathsena',
+        facebook: 'mathsena',
+        instagram: 'mathsena',
+        twitter: 'mathsena'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
