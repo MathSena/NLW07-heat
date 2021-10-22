@@ -1,6 +1,10 @@
 *{
   margin: 0;
+  
 }
+
+
+
 
 html,
 body{
@@ -10,12 +14,38 @@ body{
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+
 }
+
+
 
 body{
   display: grid;
   place-items: center;
+  background: linear-gradient(-45deg, #770808, #FAA530, #F82F6F, #25221f);
+  background-size: 400% 400%;
+  animation: colors 10s ease-in-out infinite;
 }
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
+
 
 main{
   background-image: url('images/background.svg');
@@ -90,4 +120,12 @@ ul{
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+li:hover{
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+  box-shadow: 0 0 10px #b821f3, 0 0 40px #b821f3, 0 0 80px #b821f3;
+  
 }
