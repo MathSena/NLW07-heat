@@ -22,15 +22,17 @@
           <img
             src="https://lorempixel.com/185/185/sports/2/"
             alt="foto pessoal"
+            id="userImage"
           />
+        </div>
 
           <h1 id="userName">Matheus Sena</h1>
-
-          <a href="https://github.com/" target="_blank"
-            ><img src="images/github.svg" alt="Github" /> @itsmathsena</a
+          <a id="userLink" href="https://github.com/mathsena" target="_blank">
+            <img src="images/github.svg" alt="Github" />
+            <span id="userLogin">maykbrito</span></a
           >
 
-          <p>Descrição</p>
+          <p id="userBio">Descrição</p>
 
           <ul id="socialLinks">
             <li class="youtube">
@@ -57,25 +59,6 @@
         </div>
       </div>
     </main>
-    <script>
-      const LinksSocialMedia = {
-        github: 'mathsena',
-        youtube: 'mathsena',
-        facebook: 'mathsena',
-        instagram: 'mathsena',
-        twitter: 'mathsena'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
