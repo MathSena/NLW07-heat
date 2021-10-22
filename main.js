@@ -1,9 +1,9 @@
 const LinksSocialMedia = {
   github: 'mathsena',
-  youtube: 'mathsena',
-  facebook: 'mathsena',
-  instagram: 'mathsena',
-  twitter: 'mathsena'
+  youtube: '',
+  facebook: '',
+  instagram: 'itsmathsena',
+  twitter: ''
 }
 
 function changeSocialMediaLinks() {
